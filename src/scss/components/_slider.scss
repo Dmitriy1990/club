@@ -1,0 +1,126 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+.slider.vertical {
+  height: 500px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.35s ease;
+  will-change: transform;
+  list-style-type: none;
+}
+
+.slider.vertical .slider-track {
+  flex-direction: column;
+}
+
+.slide {
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+.slider-btn {
+  position: absolute;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  cursor: pointer;
+}
+
+%slide-nav {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  flex: none;
+  background-color: var(--main);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAxMiAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuODc1NzIgMTguMzM3M0wxLjQxNDE5IDkuODc1NzRMOS44NzU3MiAxLjQxNDIxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiLz4KPC9zdmc+Cg==);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  transition:
+    250ms ease-in-out,
+    transform 150ms ease;
+  &:hover {
+    background-color: var(--yellow);
+  }
+  &:disabled {
+    background-color: var(--disabled);
+    cursor: not-allowed;
+  }
+  @media (max-width: 767px) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.prev {
+  @extend %slide-nav;
+  left: 10px;
+  top: 50%;
+}
+
+.next {
+  @extend %slide-nav;
+  right: 10px;
+  top: 50%;
+  transform: rotate(-180deg);
+}
+
+.slider-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #bbb;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background: var(--main);
+}
+
+.slider-counter {
+  text-align: center;
+  font-size: 16px;
+  font-family: 'Golos Text';
+  color: rgba(49, 49, 49, 0.6);
+  .current {
+    color: var(--main);
+  }
+  .total {
+    color: rgba(49, 49, 49, 0.6);
+  }
+}
+
+.center-mode .slide {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.center-mode .slide.active {
+  opacity: 1;
+}

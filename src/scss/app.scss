@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+/* CSS Reset */
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/buttons';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/slider';
+@import 'components/banner';
+@import 'components/marquee';
+@import 'components/promo';
+@import 'components/session';
+@import 'components/participants';
+
+@import 'components/steps';
+
+:root {
+  --yellow: #fbce51;
+  --disabled: #d6d6d6;
+  --primary: #1f1f1f;
+  --red: #f54932;
+  --main: #313131;
+  --blue: #3057a2;
+}
+
+* {
+  font-family: 'Merriweather', serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  color: var(--main);
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fffcfc;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1284px;
+  padding: 0 30px;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+  &--full {
+    padding: 0;
+  }
+}
+
+.link {
+  text-decoration: underline;
+  color: #4736d9;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-absolute {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 
+.merriweather {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+.golos-text-<uniquifier> {
+  font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */

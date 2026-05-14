@@ -1,0 +1,23 @@
+.header {
+  width: 100%;
+  padding: 26px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 999;
+  @media (max-width: 767px) {
+    padding: 16px 0;
+  }
+  &-inner {
+    display: flex;
+  }
+  &__logo {
+    max-width: 245px;
+    height: auto;
+    @media (max-width: 767px) {
+      max-width: 213px;
+    }
+  }
+}

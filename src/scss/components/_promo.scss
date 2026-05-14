@@ -1,0 +1,36 @@
+.promo {
+  overflow: hidden;
+  padding-top: 107px;
+  margin-bottom: 33px;
+  vertical-align: middle;
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 48px;
+    gap: 24px;
+  }
+  &__image {
+    float: right;
+    margin-left: 64px;
+    margin-top: -28px;
+    vertical-align: middle;
+    @media (max-width: 992px) {
+      float: none;
+      order: 2;
+      margin: 0;
+    }
+  }
+  &__text {
+    display: inline;
+    line-height: 135%;
+    @media (max-width: 992px) {
+      white-space: normal;
+      &:first-of-type {
+        order: 1;
+      }
+      &:last-of-type {
+        order: 3;
+      }
+    }
+  }
+}

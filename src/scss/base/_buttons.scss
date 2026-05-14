@@ -1,0 +1,49 @@
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 66px;
+  padding: 13px 50px;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    250ms ease-in-out,
+    transform 150ms ease;
+  appearance: none;
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  background: var(--primary);
+  color: #fff;
+  @media (max-width: 767px) {
+    padding: 13px 40px;
+  }
+  &:hover {
+    background: var(--yellow);
+    color: var(--primary);
+  }
+  &--outline {
+    background: none;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    &:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+    @media (max-width: 767px) {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-color: rgba(255, 255, 255, 0.9);
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        color: var(--primary);
+      }
+    }
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background: var(--disabled);
+  }
+}

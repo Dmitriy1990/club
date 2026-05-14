@@ -1,0 +1,163 @@
+.steps {
+  margin-bottom: 200px;
+  @media (max-width: 767px) {
+    margin-bottom: 123px;
+  }
+  &__inner {
+    position: relative;
+    max-width: 1352px;
+    margin: 0 auto;
+  }
+  &__fly {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    width: 29.66%;
+    @media (max-width: 992px) {
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: 0 auto -60px;
+      width: 100%;
+      max-width: 335px;
+      position: relative;
+    }
+  }
+  &-head {
+    max-width: 806px;
+    margin-bottom: 53px;
+    @media (max-width: 992px) {
+      margin-bottom: 8px;
+    }
+    &__title {
+      display: inline;
+      margin-right: 30px;
+      @media (max-width: 992px) {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 14px;
+      }
+    }
+    &__desc {
+      max-width: 264px;
+      display: inline-block;
+      font-family: 'Golos Text', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 120%;
+      color: var(--blue);
+      @media (max-width: 992px) {
+        max-width: 100%;
+      }
+      @media (max-width: 767px) {
+        font-size: 18px;
+      }
+    }
+  }
+  &-nav {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    @media (max-width: 992px) {
+      display: flex;
+    }
+  }
+}
+
+.layout {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'g1 g1 g2'
+    'g3 g3 g2'
+    'g4 g5 g5';
+  gap: 20px;
+  @media (max-width: 992px) {
+    display: flex;
+    gap: 0px;
+    margin-bottom: 28px;
+  }
+}
+
+.group-1 {
+  grid-area: g1;
+}
+.group-2 {
+  grid-area: g2;
+}
+.group-3 {
+  grid-area: g3;
+}
+.group-4 {
+  grid-area: g4;
+}
+.group-5 {
+  grid-area: g5;
+  .card__text {
+    padding-right: 39%;
+    @media (max-width: 992px) {
+      padding-right: 20px;
+    }
+  }
+}
+
+.card {
+  padding: 20px 21px 20px 20px;
+  text-align: left;
+  position: relative;
+  background: #e9ded4 url(../images/content/paper.png);
+  background-size: cover;
+  display: flex;
+  gap: 16px;
+  @media (max-width: 992px) {
+    padding: 0;
+  }
+  &__num {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    width: 36px;
+    height: 36px;
+    background: #ffffff;
+    border-radius: 60px;
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+  }
+  &__text {
+    font-family: 'Golos Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  @media (max-width: 992px) {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    background: #e9ded4 url(../images/content/paper.png);
+    background-size: cover;
+    &-slide {
+      flex-shrink: 0;
+      @media (max-width: 992px) {
+        padding: 62px 24px 34px 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+.session {
+  margin-bottom: 191px;
+  @media (max-width: 992px) {
+    margin-bottom: 120px;
+  }
+  &__inner {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+  &-left {
+    max-width: 530px;
+    min-width: 400px;
+    @media (max-width: 992px) {
+      min-width: auto;
+    }
+  }
+
+  &-right {
+    max-width: 733px;
+    padding-right: 30px;
+    padding-top: 20px;
+    @media (max-width: 992px) {
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 5px;
+    }
+  }
+  &__title {
+    margin-bottom: 48px;
+    @media (max-width: 992px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__desc {
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--blue);
+    @media (max-width: 992px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.line-through {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    background-color: var(--red);
+    border-radius: 50%;
+    height: 2px;
+  }
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 33px;
+
+  @media (max-width: 992px) {
+    padding-bottom: 26px;
+  }
+
+  tr {
+    border-bottom: 2px solid #d0d0d0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  td {
+    font-family: 'Golos Text', sans-serif;
+    font-size: 20px;
+    line-height: 120%;
+
+    @media (max-width: 767px) {
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__name {
+    width: 306px;
+    padding: 15px 16px 15px 0;
+    padding-right: 16px;
+    border-right: 2px solid #d0d0d0;
+    font-weight: 400;
+    color: var(--main);
+
+    @media (max-width: 767px) {
+      border-right: none;
+      padding-bottom: 8px;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__value {
+    padding-left: 16px;
+    padding: 15px 16px;
+    font-weight: 600;
+
+    @media (max-width: 767px) {
+      padding-left: 0;
+      padding-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    tr {
+      display: block;
+      padding: 16px 0;
+      &:nth-child(4) {
+        display: flex;
+      }
+    }
+  }
+}
+
+.line-through {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red);
+    border-radius: 50%;
+  }
+}
