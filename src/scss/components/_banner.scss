@@ -124,6 +124,9 @@
     @media (max-width: 767px) {
       top: -80px;
     }
+    &__text {
+      mix-blend-mode: overlay;
+    }
   }
 }
 
